@@ -1,0 +1,18 @@
+(function($) {
+    $.admin_add = {version: '1.0'};
+    $.fn.admin_add = function(config){
+        config = $.extend({}, {
+                variable: '',
+
+                callback: function() {
+
+                }
+        }, config);
+
+        if($.browser.msie){
+            $.ajaxSetup({cache: false});
+        }
+
+    }
+    return this;
+})(jQuery);

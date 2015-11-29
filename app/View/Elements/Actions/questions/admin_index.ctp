@@ -1,0 +1,1 @@
+<button class="btn btn-small btn-primary" onclick="window.location.href = '<?php echo $this->Html->url(array("controller"=>"questions", "action"=>"add", $practice_test_id));?>'">New Question</button>&nbsp;
