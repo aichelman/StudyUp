@@ -10,7 +10,6 @@
                     <?php $homeActive = ($this->request->params['controller']=='pages') ? '' : 'active'; ?>
                     <?php $aboutActive = ($this->request->params['controller']=='pages') ? 'active' : ''; ?>
                     <li class="<?php echo $homeActive;?>"><a href="<?php echo $this->Html->url('/'); ?>">Home</a></li>
-                    <li class="<?php echo $aboutActive;?>"><a href="<?php echo $this->Html->url('/pages/about');?>">About</a></li>
                 </ul>
                 <div class="row pull-right">
                     <div class="span4" style="text-align: right">
