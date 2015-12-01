@@ -71,7 +71,7 @@
 </div>
 
 <div class="span6">
-<h3>Top Quiz</h3><hr/>
+<h3>Top Quizzes</h3><hr/>
 <div class="practiceTests">
     <table cellpadding="0" cellspacing="0" id="practice_table" class="table table-striped table-bordered table-condensed">
         <thead>
@@ -131,7 +131,12 @@
 </div>
 </div>
 <script type="text/javascript">
-    var published = { toggle : function(id, url){ obj = $('#'+id).closest("span"); $.ajax({ url: url, type: "POST", success: function(response){ obj.html(response); } }); } };
+    var published = { 
+        toggle : function(id, url) { 
+            obj = $('#'+id).closest("span"); 
+            $.ajax({ url: url, type: "POST", success: function(response){ obj.html(response); } }); 
+                                    } 
+    };
 
 
     $(function () {
