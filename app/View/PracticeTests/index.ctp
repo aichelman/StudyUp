@@ -1,5 +1,16 @@
 <div class="table-bordered bg-white" style="padding:20px">
 <div class="row">
+    <div class="span8">
+<div class="pagination">
+        <ul>
+<?php
+        echo $this->Paginator->prev('&larr; ' . __('previous'), array('tag' => 'li','escape'=>false), null, array('tag' => 'li', 'escape'=>false, 'class' => 'prev disabled'));
+        echo $this->Paginator->numbers(array('separator' => '','tag' => 'li', 'before'=>'', 'after'=>''));
+        echo $this->Paginator->next(__('next') . ' &rarr;', array('tag' => 'li','escape'=>false), null, array('tag' => 'li', 'escape'=>false, 'class' => 'next disabled'));
+?>
+        </ul>
+</div>
+</div>
 <?php
 if($posts){
 $totalRow = count($posts);
