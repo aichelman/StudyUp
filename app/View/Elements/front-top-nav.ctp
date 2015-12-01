@@ -3,7 +3,6 @@
         <div class="container" style="padding-top: 10px;">
             <a href="<?php echo $this->Html->url('/'); ?>" class="brand" style="margin-top:-15px; margin-bottom:-10px">
                 <img src="<?php echo $this->Html->url('/img/front/logo.png');?>">
-<!--                <p style="font-size: 28px;">Open Quiz</p>-->
             </a>
             <div class="nav-collapse">
                 <ul class="nav">
@@ -12,7 +11,7 @@
                     <li class="<?php echo $homeActive;?>"><a href="<?php echo $this->Html->url('/'); ?>">Home</a></li>
                 </ul>
                 <div class="row pull-right">
-                    <div class="span4" style="text-align: right">
+                    <div class="span7" style="text-align: right">
                          <?php
                             if($this->Session->read('Auth.User')):
                          ?>
@@ -26,6 +25,9 @@
 						?>
                                 </div>
                         <?php else: ?>
+                        <div class="btn-group">
+                            <a class="btn btn-small btn-danger">Experience Points: </a>
+                        </div>
                                 <div class="btn-group">
                                     <a href="<?php echo $this->Html->url('/member/practice_tests/'); ?>" class="btn"><i class="icon white user"></i> Dashboard</a>
                                     <a href="#" data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></a>
