@@ -87,11 +87,10 @@
       <div class="row">
         <div class="span5">
           <h3>
-            <a title="vukhanhtruong@gmail.com" href="<?php echo $this->Html->url('/');?>">StudyUp</a>
+            <a href="<?php echo $this->Html->url('/');?>">StudyUp</a>
           </h3>
           <p>
-            &copy; 2012 <a href="mailto:vukhanhtruong@gmail.com">StudyUp</a>
-            .All Rights Reserved.
+            COMP 426 Final Project
           </p>
         </div>
         <div class="span7">
