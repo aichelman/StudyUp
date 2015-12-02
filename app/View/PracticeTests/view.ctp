@@ -1,12 +1,16 @@
 <?php echo $this->Html->script('application/quiz/vote_share');?>
 <?php echo $this->element('breadcrumb');?>
+//View for quizzes
+
 <div class="span9" style="margin-left: 0px;">
 <div class="table-bordered bg-white" style="padding:20px">
         <div class="posts">
+            <!--Echos Title, Date Created, and Description-->
             <h3><a href="<?php echo $this->Html->url("/practice_tests/view/" . $post['PracticeTest']['id']."-".$post['PracticeTest']['slug']); ?>"><?php echo h($post['PracticeTest']['title']); ?></a></h3>
             <p><span class="label" style="text-transform: none; font-style: italic; font-size: 12px; font-weight: normal"><?php echo h($post['User']['name'])." on ".$this->Time->niceShort($post['PracticeTest']['created']); ?></span></p>
             <p><?php echo h($post['PracticeTest']['description']); ?></p>
         </div>
+        <!--Builds like, dislike, and social media buttons-->
         <div style="margin-bottom: 9px" class="btn-toolbar">
             <div class="btn-group">
                 <a href="javascript:;;" class="btn btnVote" id="button-likes" method="likes"><i class="icon-heart"></i> Like</a>
@@ -20,13 +24,15 @@
                 <span class="label"><?php echo h($post['PracticeTest']['dislikes']); ?> dislikes</span>
             </div>
         </div>
+        <!--Prevents unknown users from liking/disliking-->
         <div class="alert alert-info fade in" id="auth-voted" style="display: none">
                     <a href="javascript:;;"  class="close">×</a>
                     <a href="<?php echo $this->Html->url('/users/login');?>">Sign in</a> or <a href="<?php echo $this->Html->url('/users/register');?>">sign up</a> now!
         </div>
+        <!--Social Media Modal-->
         <div class="alert alert-info fade in" id="alert-dislikes" style="display: none">
                     <a href="javascript:;;" class="close">×</a>
-                    You disliked this video. Thanks for the feedback!
+                    You disliked this quiz. Thanks for the feedback!
         </div>
         <div class="alert alert-info fade in" id="alert-likes" style="display: none">
             <a href="javascript:;;" class="close">×</a>
@@ -62,6 +68,8 @@
                 </div>
             </div>
         </div>
+
+        <!--Calls Openquiz.js to build quiz interface-->
         <div id="quiz-content"></div>
         <?php echo $this->Html->script(array('/openquiz.js?id='.$post['PracticeTest']['id']));?>
         <script type="text/javascript">
@@ -71,6 +79,7 @@
         </script>
 </div>
 </div>
+
 <script type="text/javascript">
 $(function(){
     $(document).vote_share({vote_url:'<?php echo $this->Html->url('/practice_tests/vote/'.$id);?>'});
