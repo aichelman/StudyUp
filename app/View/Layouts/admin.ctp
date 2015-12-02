@@ -6,12 +6,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le styles -->
     <link href="<?php echo $this->Html->url('/css/twitter/bootstrap.css');?>" rel="stylesheet">
     <link href="<?php echo $this->Html->url('/css/twitter/bootstrap-responsive.css');?>" rel="stylesheet">
     <link href="<?php echo $this->Html->url('/css/twitter/bootstrap-mycustomize.css');?>" rel="stylesheet">
@@ -39,9 +33,6 @@
       .container > footer p {
         text-align: center; /* center align it with the container */
       }
-/*      .container {
-        width: 940px;  downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. 
-      }*/
 
       /* The white background content wrapper */
       .container > .content {
@@ -62,7 +53,7 @@
         padding: 20px 20px 10px;
         margin: -20px -20px 20px;
       }
-      
+
       /* Give a quick and non-cross-browser friendly divider */
       .content .span5 {
         margin-left: 0;
@@ -79,7 +70,7 @@
 
   <body>
 
-    <?php echo $this->element('top-nav');?>
+    <?php echo $this->element('top-nav');?> 
 
     <div class="container">
         <div class="content">
@@ -108,12 +99,8 @@
             </div>
         </div>
 
-    </div> <!-- /container -->
+    </div> 
 
-    <!-- Le javascript
-    ================================================== -->
-
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php echo $this->Html->url('/js/twitter/bootstrap.min.js');?>"></script>
 
   </body>
