@@ -1,4 +1,4 @@
-//Things to do: Add AJAX Search Bar, Take off logo, change top quiz sidebar to category
+//Things to do: Add AJAX Search Bar
 <?php
 if (($jquery = Cache::read('getJquery')) === false) {
 $scip = "http://ajax.googleapis.com"; // Include protocol; No trailing slash, path or port

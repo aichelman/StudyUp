@@ -26,7 +26,7 @@
         </div>
         <div class="alert alert-info fade in" id="alert-dislikes" style="display: none">
                     <a href="javascript:;;" class="close">×</a>
-                    You dislike this video. Thanks for the feedback!
+                    You disliked this video. Thanks for the feedback!
         </div>
         <div class="alert alert-info fade in" id="alert-likes" style="display: none">
             <a href="javascript:;;" class="close">×</a>
@@ -94,6 +94,7 @@ if($likes){
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
+
 <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 <!--Twitter-->
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

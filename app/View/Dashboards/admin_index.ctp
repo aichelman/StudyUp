@@ -8,7 +8,7 @@
 ?>
 <div class="row">
 <div class="span6">
-<h3>New Quiz</h3><hr/>
+<h3>New Quizzes</h3><hr/>
 <div class="practiceTests">
     <table cellpadding="0" cellspacing="0" id="practice_table" class="table table-striped table-bordered table-condensed">
         <thead>
@@ -101,7 +101,7 @@
         </tbody>
     </table>
 </div>
-<h3>New Member</h3><hr/>
+<h3>New Members</h3><hr/>
 <div class="practiceTests">
     <table cellpadding="0" cellspacing="0" id="practice_table" class="table table-striped table-bordered table-condensed">
         <thead>

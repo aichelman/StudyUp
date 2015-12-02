@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Open Quiz</title>
+    <title>StudyUp</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -62,13 +62,7 @@
         padding: 20px 20px 10px;
         margin: -20px -20px 20px;
       }
-
-      /* Styles you shouldn't keep as they are for displaying this base example only */
-      .content .span12,
-      .content .span7,
-      .content .span5 {
-        min-height: 500px;
-      }
+      
       /* Give a quick and non-cross-browser friendly divider */
       .content .span5 {
         margin-left: 0;

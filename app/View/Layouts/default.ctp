@@ -10,11 +10,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    
     <?php
     if(Configure::read('debug') > 0){
         echo $this->Html->script('jquery/jquery-1.8.2.min');
@@ -123,13 +118,6 @@
         });
     });
     </script>
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- Le javascript
-    ================================================== -->
-
-    <!-- Placed at the end of the document so the pages load faster -->    
     <?php echo Configure::read('GA.embed_code');?>
   </body>
 </html>
