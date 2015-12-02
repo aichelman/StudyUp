@@ -18,18 +18,22 @@
         </tr>
         </thead>
         <tbody>
+
+        <!--displays most recent quizzes-->
         <?php
         foreach ($practiceTests as $practiceTest):
         ?>
         <tr id="<?php echo $practiceTest['PracticeTest']['id']; ?>">
             <td>
-                <a data-placement="right" data-content="<?php echo h($practiceTest['PracticeTest']['description']);?>" rel="popover" class="" href="<?php echo $this->Html->url(array('controller'=>'questions', 'action' => 'index', $practiceTest['PracticeTest']['id']));?>" data-original-title="<?php echo h($practiceTest['PracticeTest']['title']);?>">
+                <!--Quiz Attributes-->
+                <a data-placement="right" data-content="<?php echo h($practiceTest['PracticeTest']['description']);?>" href="<?php echo $this->Html->url(array('controller'=>'questions', 'action' => 'index', $practiceTest['PracticeTest']['id']));?>" data-original-title="<?php echo h($practiceTest['PracticeTest']['title']);?>">
                 <?php echo $this->Text->excerpt(h($practiceTest['PracticeTest']['title']), null, 20); ?>
                 </a>
                 <span class="label"><em><?php echo h($practiceTest['User']['name']); ?></em></span>
                 <span class="label label-info link-white"><a href="<?php echo $this->Html->url('/practice_tests/view/'.$practiceTest['PracticeTest']['id'].'-'.$practiceTest['PracticeTest']['slug']);?>" target="_blank"><i class="icon-search icon-white"></i> View</a></span>
             </td>
             <td style="text-align: center">
+                <!--Awaiting approval, live, or off status icon-->
                 <span style="cursor: pointer">
                 <?php
                 switch ($practiceTest['PracticeTest']['published']){
@@ -86,13 +90,15 @@
         ?>
         <tr id="<?php echo $practiceTest['PracticeTest']['id']; ?>">
             <td>
-                <a data-placement="right" data-content="<?php echo h($practiceTest['PracticeTest']['description']);?>" rel="popover" class="" href="<?php echo $this->Html->url(array('controller'=>'questions', 'action' => 'index', $practiceTest['PracticeTest']['id']));?>" data-original-title="<?php echo h($practiceTest['PracticeTest']['title']);?>">
+                <!--Quiz Attributes-->
+                <a data-placement="right" data-content="<?php echo h($practiceTest['PracticeTest']['description']);?>" class="" href="<?php echo $this->Html->url(array('controller'=>'questions', 'action' => 'index', $practiceTest['PracticeTest']['id']));?>" data-original-title="<?php echo h($practiceTest['PracticeTest']['title']);?>">
                 <?php echo $this->Text->excerpt(h($practiceTest['PracticeTest']['title']), null, 20); ?>
                 </a>
                 <span class="label"><em><?php echo h($practiceTest['User']['name']); ?></em></span>
                 <span class="label label-info link-white"><a href="<?php echo $this->Html->url('/practice_tests/view/'.$practiceTest['PracticeTest']['id'].'-'.$practiceTest['PracticeTest']['slug']);?>" target="_blank"><i class="icon-search icon-white"></i> View</a></span>
             </td>
             <td style="text-align: center">
+                <!--likes and dislike count-->
                 <span class="label label-warning"><?php echo h($practiceTest['PracticeTest']['likes']); ?> likes</span>
                 <span class="label"><?php echo h($practiceTest['PracticeTest']['dislikes']); ?> dislikes</span>
             </td>
@@ -131,6 +137,7 @@
 </div>
 </div>
 <script type="text/javascript">
+    //AJAX/RESTfully change status of quiz
     var published = { 
         toggle : function(id, url) { 
             obj = $('#'+id).closest("span"); 

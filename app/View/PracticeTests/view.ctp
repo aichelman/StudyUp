@@ -1,6 +1,5 @@
 <?php echo $this->Html->script('application/quiz/vote_share');?>
 <?php echo $this->element('breadcrumb');?>
-//View for quizzes
 
 <div class="span9" style="margin-left: 0px;">
 <div class="table-bordered bg-white" style="padding:20px">

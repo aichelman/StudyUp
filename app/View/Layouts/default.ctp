@@ -1,10 +1,10 @@
 <!DOCTYPE html>
+<!--This file builds out the home page shell-->
 <html lang="en">
   <head>
     <?php echo $this->Html->charset(); ?>
     <title>
         Study Up!
-        <?php //echo $cakeDescription ?>:
         <?php echo $title_for_layout; ?>
     </title>
     <meta name="description" content="">
@@ -21,16 +21,6 @@
             src="https://www.google.com/jsapi?key=ABQIAAAAEkMN-j2qpI1mLTSLd8rqrBSDkADYWJgeVp2QQf8WQ5D0s2Q90RS7-pWY3omCx9aNOInEzev6xsuT3Q">
     </script>
 
-    <script type="text/javascript">
-      google.load("webfont", "1");
-
-      google.setOnLoadCallback(function() {
-      WebFont.load({
-      google: {
-      families: [ 'Droid Sans:400,700']
-      }});
-      });
-    </script>    
     <?php
     }
     ?>

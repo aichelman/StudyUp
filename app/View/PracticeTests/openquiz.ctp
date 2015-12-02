@@ -1,4 +1,4 @@
-//Things to do: Add AJAX Search Bar
+//Things to do: Add AJAX Search Bar, Update all CSS files, jquery.min, how does PHP grab the data
 <?php
 if (($jquery = Cache::read('getJquery')) === false) {
 $scip = "http://ajax.googleapis.com"; // Include protocol; No trailing slash, path or port
@@ -611,6 +611,7 @@ if($numOfQuestion > 0){
         $i++;
     }
 ?>
+
 var openquiz = <?php echo json_encode($questions);?>;
 $(document).ready(function() {
     $("head").append("<link>");
