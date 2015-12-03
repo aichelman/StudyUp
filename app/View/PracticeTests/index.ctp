@@ -1,28 +1,32 @@
 <div class="table-bordered bg-white" style="padding:20px">
-<div class="row">
-    <div class="span8">
-<div class="pagination">
-        <ul>
+    <div class="row">
+        <div class="span8">
+
+        <!--Top Page Scroll-->    
+        <div class="pagination">
+            <ul>
+            <?php
+                echo $this->Paginator->prev('&larr; ' . __('previous'), array('tag' => 'li','escape'=>false), null, array('tag' => 'li', 'escape'=>false, 'class' => 'prev disabled'));
+                echo $this->Paginator->numbers(array('separator' => '','tag' => 'li', 'before'=>'', 'after'=>''));
+                echo $this->Paginator->next(__('next') . ' &rarr;', array('tag' => 'li','escape'=>false), null, array('tag' => 'li', 'escape'=>false, 'class' => 'next disabled'));
+            ?>
+            </ul>
+        </div>
+        </div>
+
 <?php
-        echo $this->Paginator->prev('&larr; ' . __('previous'), array('tag' => 'li','escape'=>false), null, array('tag' => 'li', 'escape'=>false, 'class' => 'prev disabled'));
-        echo $this->Paginator->numbers(array('separator' => '','tag' => 'li', 'before'=>'', 'after'=>''));
-        echo $this->Paginator->next(__('next') . ' &rarr;', array('tag' => 'li','escape'=>false), null, array('tag' => 'li', 'escape'=>false, 'class' => 'next disabled'));
+    if($posts){
+    $totalRow = count($posts);
+    $i = 0;
 ?>
-        </ul>
-</div>
-</div>
-<?php
-if($posts){
-$totalRow = count($posts);
-$i = 0;
-?>
+
 <div class="span8">
     <ul class="thumbnails">    
 <?php
 foreach ($posts as $post){    
 ?>
-
-              <li class="span8">
+            <!--Displays Quizzes by Most Recently Created-->    
+            <li class="span8">
                 <div class="thumbnail">                  
                   <div class="caption">
                     <h4>
@@ -52,15 +56,16 @@ foreach ($posts as $post){
 </div>
 
 <div class="span8">
-<div class="pagination">
+    <!--Bottom Page Scroll-->
+    <div class="pagination">
         <ul>
-<?php
-        echo $this->Paginator->prev('&larr; ' . __('previous'), array('tag' => 'li','escape'=>false), null, array('tag' => 'li', 'escape'=>false, 'class' => 'prev disabled'));
-        echo $this->Paginator->numbers(array('separator' => '','tag' => 'li', 'before'=>'', 'after'=>''));
-        echo $this->Paginator->next(__('next') . ' &rarr;', array('tag' => 'li','escape'=>false), null, array('tag' => 'li', 'escape'=>false, 'class' => 'next disabled'));
-?>
+        <?php
+            echo $this->Paginator->prev('&larr; ' . __('previous'), array('tag' => 'li','escape'=>false), null, array('tag' => 'li', 'escape'=>false, 'class' => 'prev disabled'));
+            echo $this->Paginator->numbers(array('separator' => '','tag' => 'li', 'before'=>'', 'after'=>''));
+            echo $this->Paginator->next(__('next') . ' &rarr;', array('tag' => 'li','escape'=>false), null, array('tag' => 'li', 'escape'=>false, 'class' => 'next disabled'));
+        ?>
         </ul>
-</div>
+    </div>
 </div>
 </div>
 </div>

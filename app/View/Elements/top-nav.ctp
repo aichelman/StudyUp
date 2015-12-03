@@ -25,8 +25,6 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">Users <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <!-- <li><a href="<?php echo $this->Html->url('/admin/user_permissions');?>"><?php echo __('Permission');?></a></li>
-                            <li class="divider"></li> -->
                             <li><a href="<?php echo $this->Html->url('/admin/users');?>"><?php echo __('Manage Users');?></a></li>
                             <li><a href="<?php echo $this->Html->url('/admin/users/add');?>"><?php echo __('New User');?></a></li>
                             <li class="divider"></li>

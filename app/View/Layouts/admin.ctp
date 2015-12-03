@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>StudyUp</title>
+    <title>StudyUp - Admin Dashboard</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
