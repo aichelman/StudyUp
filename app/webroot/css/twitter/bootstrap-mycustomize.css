@@ -145,7 +145,7 @@ body,input,textarea,p{font-family:"Droid Sans","Helvetica Neue","Helvetica","Ari
   }
 }
 article#main{
-    background: -webkit-linear-gradient(left, #05293d, #2dddf5)
+    background: linear-gradient(to bottom, #05293d, #2dddf5)
 }
 article#main h3 {
 
@@ -182,7 +182,7 @@ margin-bottom: 5px;
 }
 
 div.thumbnail{
-	background: -webkit-linear-gradient(#05293d, #2dddf5);
+	background: linear-gradient(#05293d, #2dddf5);
 	border: solid black;
 }
 
