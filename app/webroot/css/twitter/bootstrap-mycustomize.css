@@ -269,7 +269,7 @@ table#practice_table tbody tr td p a:hover{
 }
 
 table#practice_table tbody tr td{
-	background: linear-gradient(to bottom, #05293d, #2dddf5);
+	background: #2d5a72;
 	border: solid black;
 }
 
@@ -288,4 +288,8 @@ legend{
 div.table-bordered table.table-striped tbody tr td{
 	color: white;
 	background: #242428;
+}
+
+div.posts{
+	color: white;
 }
