@@ -10,6 +10,7 @@ class AppController extends Controller {
             'Auth' => array(
                 'authenticate' => array(
                     'Form' => array(
+                     //login information
                         'fields' => array('username' => 'email'),
                         'scope'  => array('User.status' => 1)
                     )
@@ -57,6 +58,7 @@ class AppController extends Controller {
      * @return string
      */
     function __getPreviousUrl() {
+    	//adding to history
         return ($this->Session->check('HistoryComponent.current')) ? $this->Session->read('HistoryComponent.current') : false;
     }
 
