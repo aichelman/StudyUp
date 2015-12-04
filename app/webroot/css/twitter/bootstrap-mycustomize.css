@@ -186,6 +186,10 @@ div.thumbnail{
 	border: solid black;
 }
 
+ul.thumbnails{
+	background: #242428;
+}
+
 div.caption{
 	color: black;
 }
