@@ -17,6 +17,7 @@ class PracticeTestsController extends AppController {
     );
 
     public function beforeFilter() {
+        //Checks security before any actions are made
         parent::beforeFilter();
 
         //$this->Security->blackHoleCallback = '__blackhole';
@@ -27,24 +28,13 @@ class PracticeTestsController extends AppController {
 
         $this->Auth->allow("index", "view", "vote", "topten", "openquiz");
     }    
-//    public function __blackhole($type){
-//        pr($type);exit;
-//    }
-    /**
-     * index method
-     *
-     * @return void
-     */
+    
     public function index(){
         $this->paginate = array('conditions'=>array('PracticeTest.published'=>1), 'order'=>array('PracticeTest.created'=>'DESC'));
         $this->PracticeTest->recursive = 0;
         $this->set('posts', $this->paginate());
     }
-    /**
-     * view method
-     *
-     * @return void
-     */
+    
     public function view($id, $slug=null){        
         $this->PracticeTest->id = $id;
         if (!$this->PracticeTest->exists()) {
@@ -236,12 +226,6 @@ class PracticeTestsController extends AppController {
         }
     }
 
-    /**
-     * member_edit method
-     *
-     * @param string $id
-     * @return void
-     */
     public function member_edit($id = null) {
         $this->PracticeTest->id = $id;
         if (!$this->PracticeTest->exists()) {

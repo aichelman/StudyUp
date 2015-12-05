@@ -62,10 +62,10 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => true,
-		'host' => 'sql5.freemysqlhosting.net',
-		'login' => 'sql597994',
-		'password' => 'bU4!uC3%',
-		'database' => 'sql597994',
+		'host' => 'classroom.cs.unc.edu',
+		'login' => 'johngh',
+		'password' => 'COMP426',
+		'database' => 'johnghdb',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);

@@ -2,26 +2,13 @@
 
 App::uses('AppModel', 'Model');
 
-/**
- * Question Model
- *
- * @property PracticeTest $PracticeTest
- * @property Answer $Answer
- * @property EditAnswer $EditAnswer
- */
 class Question extends AppModel {
-    /**
-     *
-     * Upload plugin
-     */
+    //Containable is a CakePHP behavior that optimizes what's retrieved from DB
     var $actsAs = array(
            'Containable'
 	);
-    /**
-     * Validation rules
-     *
-     * @var array
-     */
+
+    //Requires that the question have content
     public $validate = array(
         'content' => array(
             'notEmpty' => array(
@@ -35,12 +22,7 @@ class Question extends AppModel {
         )
     );
 
-//The Associations below have been created with all possible keys, those that are not needed can be removed
-    /**
-     * belongsTo associations
-     *
-     * @var array
-     */
+    //Associates question with a specific PT
     public $belongsTo = array(
         'PracticeTest' => array(
             'className' => 'PracticeTest',

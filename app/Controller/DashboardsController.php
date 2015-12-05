@@ -3,11 +3,7 @@
 App::uses('PracticeTestsController', 'Controller');
 App::uses('analytics', 'GoogleAnalytics');
 App::import('Vendor', 'analytics', array('file' => 'GoogleAnalytics' . DS . 'analytics.class.php'));
-/**
- * Dashboard Controller
- *
- * @property PracticeTest $PracticeTest
- */
+//Consider deleting GA
 class DashboardsController extends PracticeTestsController {
     public $uses = array('PracticeTest', 'AclManagement.User');
     public $helpers = array('Text', 'Time');

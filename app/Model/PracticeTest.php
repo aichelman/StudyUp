@@ -15,11 +15,7 @@ class PracticeTest extends AppModel {
 
     public $actsAs = array('Containable');
 
-    /**
-     * Validation rules
-     *
-     * @var array
-     */
+    //Validates existing PT
     public $validate = array(        
         'title' => array(
             'notempty' => array(
@@ -33,12 +29,7 @@ class PracticeTest extends AppModel {
         )
     );
 
-    //The Associations below have been created with all possible keys, those that are not needed can be removed
-    /**
-     * belongsTo associations
-     *
-     * @var array
-     */
+    //Checks who created this PT
     public $belongsTo = array(       
         'User' => array(
             'className' => 'User',
@@ -48,11 +39,7 @@ class PracticeTest extends AppModel {
             'order' => ''
         )
     );
-    /**
-     * hasMany associations
-     *
-     * @var array
-     */
+    //Has multiple questions associated with PT
     public $hasMany = array(    
         'Question' => array(
             'className' => 'Question',
@@ -69,6 +56,7 @@ class PracticeTest extends AppModel {
         ),
     );
     
+    //Converts special characters titles to readable versions (aka apple purée to apple_puree)
     public function beforeSave($options = array()) {
         parent::beforeSave($options);
         if(isset($this->data['PracticeTest']['title']) && !empty($this->data['PracticeTest']['title'])){
@@ -77,6 +65,7 @@ class PracticeTest extends AppModel {
         return true;
     }
 
+    //After save delete current key to free up cache
     public function  afterSave($created) {
         parent::afterSave($created);
 
@@ -84,7 +73,7 @@ class PracticeTest extends AppModel {
             Cache::delete('getPracticeTitleById'.$this->id);
         }
     }
-
+    //After deleting a PT, delete key to free up cache
     public function  afterDelete() {
         parent::afterDelete();
 
@@ -92,7 +81,7 @@ class PracticeTest extends AppModel {
             Cache::delete('getPracticeTitleById'.$this->id);
         }
     }
-
+    //Retrieve requested key into cache
     public function getPracticeTitleById($id){
         if (($practiceTest = Cache::read('getPracticeTitleById'.$id)) === false) {
                 $practiceTest = $this->field('title', array('PracticeTest.id'=>$id));
