@@ -31,7 +31,7 @@
 /*
 * Override default pagination
 */
-.pagination ul{color: #242428;float:left;margin:0;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.05);-moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.05);box-shadow:0 1px 2px rgba(0, 0, 0, 0.05);}
+.pagination ul{float:left;margin:0;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.05);-moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.05);box-shadow:0 1px 2px rgba(0, 0, 0, 0.05);}
 .pagination li{display:inline;float:left;line-height:34px;text-decoration:none;}
 .pagination a:hover,.pagination .active a, .current{
     padding:0 14px; background-color:#c7eefe;
@@ -84,9 +84,13 @@ table .headerSortUp.purple,table .headerSortDown.purple{background-color:#e2d5f0
 
 /** Other */
 body,input,textarea,p{font-family:"Droid Sans","Helvetica Neue","Helvetica","Arial","sans-serif"}body{color: #404040;padding-top:60px;background-color: #eee;min-width: 1170px}.btn.huge{border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px;font-size:20px;line-height:normal;padding:16px 20px 16px}.topbar-tweak{background:#f8f8f8;border-bottom:1px solid #e0e0e0;padding:9px 0 0}.nav .btn{margin-top:3px;padding:5px 14px 6px}.nav .text{color:#555;font-size:14px;margin-right:10px;text-shadow:none}.nav .text:hover{color:#999}.banner-square{border-radius:0;-moz-border-radius:0;-webkit-border-radius:0}.banner-pullup{margin-top:-20px}.media-wrapper{padding-bottom:0;padding-top:30px}.media-wrapper .media-unit{padding-top:30px;vertical-align:bottom}#benefits img{0 0 no-repeat;margin-top:12px}footer{background:#252525}footer a{text-decoration:none}footer a,footer a:hover{color:#fff}footer h3,footer h4,footer p{color:#999}.footer-footer{background:#1b1b1b;padding-top:10px}.footer-footer h3,.footer-footer h4{color:#fff;font-weight:bold}
+a {
+    color: #000000;
+    text-decoration: none;
+}
 
 .bg-white{
-    background-color: #FFFFFF;    
+    background-color: #ffffff;    
 }
 
 .page-header {
@@ -95,67 +99,27 @@ body,input,textarea,p{font-family:"Droid Sans","Helvetica Neue","Helvetica","Ari
 .hero-unit{
     margin-bottom: 20px
 }
-.navbar {
+.navbar{
     min-width: 1170px
 }
-.navbar .nav .active > a{
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: #2dddf5;
-  font: 'Signika', sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin: 0 10px;
-  transition: all 1s;
-}
-
-.navbar .nav .active > a:after{
-	text-align: left;
-	margin: 0;
-	opacity: 0;
-}
-
-.navbar .nav .active > a:hover {
-	color: white;
-	z-index: 1;
-}
-
-.navbar .nav .active > a:hover:after{
-	z-index: -10;
-	animation: fill 1s forwards;
-	-webkit-animation: fill 1s forwards;
-	-moz-animation: fill 1s forwards;
-	opacity: 1;
-}
-
-@-webkit-keyframes navbar {
-  0% {
-    width: 0%;
-    height: 1px;
-  }
-  50% {
-    width: 100%;
-    height: 1px;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-    background: #333;
-  }
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+    -webkit-border-radius: 19px;
+    -moz-border-radius: 19px;
+    border-radius: 19px;
 }
 article#main{
-    background: linear-gradient(to bottom, #05293d, #2dddf5);
+            background: url("../../img/front/grid-18px-masked.png");
 }
 article#main h3 {
-
-	color: #FFFFFF; font-size: 32px; font-family: 'Signika', sans-serif; padding-bottom: 10px; padding-top: 10px;
-	text-shadow: 0px 2px 1px #000000;
+    display: block; text-decoration: none;
+    font: 32px "Droid Sans", Arial, Helvetica, sans-serif; letter-spacing: -0px;
+    color: #000000;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.6), 0 2px 1px #bababa;
 }
 
 article#main p{
-    font: 16px 'Signika', Sans-Serif;
-    color: #2dddf5; text-shadow: 0px 2px 1px #000000;
+    font: 16px "Droid Sans", Tahoma, Helvetica, Arial, Sans-Serif;
+    color: #000000; text-shadow: 0px 2px 1px #bababa;
     margin: 5px 0 10px 0;
 }
 .banner-pullup {
@@ -173,118 +137,8 @@ footer {
     padding-top: 17px;
 }
 
-.span9{
-	width:660px;
-}
+.span9{width:660px}
 
 ul.frontbreadcrumb{
-	margin-bottom: 5px;
-}
-
-
-div.thumbnail{
-	background: #2d5a72;
-	border: solid black;
-}
-
-div.thumbnail a{
-	color: white;
-    font-family: proxima-nova-1, proxima-nova-2, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: #000 1px 1px, #000 2px 2px, #000 3px 3px;
-    position: relative;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-	-webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-	margin-bottom: 10px;
-	margin-top: 10px;
-}
-
-div.thumbnail a:hover{
-	color: #2dddf5;
-    text-shadow: #000 1px 1px, #000 2px 2px, #000 3px 3px, #000 4px 4px, #000 5px 5px, #000 6px 6px;
-    left: -6px;
-    top: -6px;
-}
-
-div.caption{
-	color: black; font-family: 'Signika', sans-serif; margin-top: 10px;
-}
-
-h4>a{
-	color: #2dddf5; font-size: 16px; font-family: 'Signika', sans-serif; padding-bottom: 10px; padding-top: 10px;
-}
-
-ul.breadcrumb{
-	background: #05293d;
-}
-
-ul.frontbreadcrumb{
-	color: #FFFFFF;
-}
-
-fieldset{
-	font: #FFFFFF;
-}
-
-ul li h4{
-	color: #FFFFFF;
-    font-family: proxima-nova-1, proxima-nova-2, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 32px;
-    font-weight: bold;
-    text-shadow: #000 1px 1px, #000 2px 2px, #000 3px 3px;
-    position: relative;
-	margin-bottom: 10px;
-	margin-top: 10px;
-
-}
-
-table#practice_table tbody tr td p a{
-	color: white;
-    font-family: proxima-nova-1, proxima-nova-2, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    text-shadow: #000 1px 1px, #000 2px 2px, #000 3px 3px;
-    position: relative;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-	-webkit-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-	margin-bottom: 10px;
-	margin-top: 10px;
-}
-
-table#practice_table tbody tr td p a:hover{
-	color: #2dddf5;
-    text-shadow: #000 1px 1px, #000 2px 2px, #000 3px 3px, #000 4px 4px, #000 5px 5px, #000 6px 6px;
-    left: -6px;
-    top: -6px;
-}
-
-table#practice_table tbody tr td{
-	background: #2d5a72;
-	border: solid black;
-}
-
-div.table-bordered{
-	background-color: #05293d;
-}
-
-legend{
-	color: white;
-}
-
-.control-label{
-	color: white;
-}
-
-div.table-bordered table.table-striped tbody tr td{
-	color: white;
-	background: #242428;
-}
-
-div.posts{
-	color: white;
+margin-bottom: 5px;
 }
