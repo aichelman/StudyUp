@@ -1,8 +1,14 @@
+<style>
+  #test-list{float:left;list-style:none;margin:0;padding:0;width:190px;}
+  #test-list li{padding: 10px; background:#FAFAFA;border-bottom:#F0F0F0 1px solid;}
+  #test-list li:hover{background:#F0F0F0;}
+</style>
+
 <div class="table-bordered bg-white" style="padding:20px">
     <div class="row">
         <div class="span8">
 
-        <!--Top Page Scroll-->    
+        <!--Top Page Scroll-->
         <div class="pagination">
             <ul>
             <?php
@@ -20,14 +26,24 @@
     $i = 0;
 ?>
 
+<!--search bar-->
+<div class="Search">
+	<input type="text" id="search-box" placeholder="Quiz Name" />
+  <button type="button" onclick="submit()">Submit</button>
+	<div id="suggesstion-box">
+    <ul id="test-list">
+    </ul>
+  </div>
+</div>
+
 <div class="span8">
-    <ul class="thumbnails">    
+    <ul class="thumbnails">
 <?php
-foreach ($posts as $post){    
+foreach ($posts as $post){
 ?>
-            <!--Displays Quizzes by Most Recently Created-->    
+            <!--Displays Quizzes by Most Recently Created-->
             <li class="span8">
-                <div class="thumbnail">                  
+                <div class="thumbnail">
                   <div class="caption">
                     <h4>
                         <a data-placement="right" data-content="<?php echo h($post['PracticeTest']['description']);?>" rel="popover" class="" href="<?php echo $this->Html->url("/quiz/" . $post['PracticeTest']['id'] . "-" . $post['PracticeTest']['slug'] . ".html"); ?>" data-original-title="<?php echo h($post['PracticeTest']['title']);?>">
@@ -46,12 +62,12 @@ foreach ($posts as $post){
                     </div>
                   </div>
                 </div>
-              </li>             
-              
+              </li>
+
 <?php
     $i++;
 }
-?> 
+?>
     </ul>
 </div>
 
@@ -70,7 +86,57 @@ foreach ($posts as $post){
 </div>
 </div>
 
-
+<script type="text/javascript">
+//autocomplete
+$(document).ready(function(){
+	$("#search-box").keyup(function(){
+    $("#suggesstion-box ul").empty();
+    var tests = "";
+    var i = 0;
+    <?php
+    foreach ($posts as $post){
+    ?>
+      var data = "<?php echo h($this->Text->excerpt($post['PracticeTest']['title'], null, 19, '...')); ?>";
+      if($(this).val().length!=0 && data.substring(0,$(this).val().length).toLowerCase() == $(this).val()){
+        if(i=0){
+          tests = tests+data;
+        }else{
+          tests = tests+","+data;
+        }
+        i++;
+      }
+    <?php
+    }
+    ?>
+      if(tests.length>0){
+        var arr = tests.split(",");
+  			$("#suggesstion-box").show();
+  			//$("#suggesstion-box").html(tests);
+        $.each(arr, function(index, value) {
+          if(index == 0){
+            return true;
+          }
+          $("#suggesstion-box ul").append('<li onClick="selectTest(&quot;'+value+'&quot;)">'+value+'</li>');
+        });
+  			$("#search-box").css("background","#FFF");
+      }else{
+        $("#suggesstion-box ul").empty();
+        $("#suggesstion-box").hide();
+      }
+	});
+});
+//select test name
+function selectTest(val) {
+  $("#search-box").val(val);
+  $("#suggesstion-box").hide();
+}
+function submit() {
+  $('.thumbnail').show();
+  var testTitle = $("#search-box").val();
+  var a = $('.thumbnail a').not("[data-original-title='"+testTitle+"']");
+  a.parent().parent().parent().hide();
+}
+</script>
 
 <?php }else{
     echo "<h3>Sorry, no content found.</h3>";
