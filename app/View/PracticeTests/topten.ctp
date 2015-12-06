@@ -1,6 +1,6 @@
 <ul class="breadcrumb" style="margin-bottom: 5px">
     <li>
-        <h4>Top Quiz</h4>
+        <h4>Top Quizzes</h4>
     </li>
 </ul>
 <div>

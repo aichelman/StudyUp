@@ -169,7 +169,7 @@ class PracticeTestsController extends AppController {
                 $this->PracticeTest->query("UPDATE ".$this->PracticeTest->table." SET $resetUpdate, avg=likes - dislikes WHERE id=$id");
                 
                 /**
-                 * save rate
+                 * save new rating
                  */
                 $rateData['Rate']['practice_test_id'] = $id;
                 $rateData['Rate']['user_id'] = $user_id;

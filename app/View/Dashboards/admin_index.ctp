@@ -2,9 +2,6 @@
         'jquery/json2',
         'jquery/tablednd/jquery.tablednd'
     ));
-	if(isset($flot_data_views) && isset($flot_data_visits)){
-		echo $this->element('google_analytics', array('flot_data_views'=>$flot_data_views, 'flot_data_visits'=>$flot_data_visits));
-	}
 ?>
 <div class="row">
 <div class="span6">
