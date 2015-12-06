@@ -1,5 +1,4 @@
 <?php
-/*i18n schema generated on: 2007-11-25 07:11:25 : 1196004805*/
 
 /**
  * This is i18n Schema file
@@ -9,7 +8,7 @@
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright 2005-2015, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.

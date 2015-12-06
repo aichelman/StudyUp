@@ -11,7 +11,7 @@
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright 2005-2015, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
@@ -29,7 +29,7 @@ Cache::config('default', array('engine' => 'File'));
 Configure::load('config');
 Configure::load('facebook');
 Configure::load('twitter');
-Configure::load('google_analytics');
+//Configure::load('google_analytics');
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *

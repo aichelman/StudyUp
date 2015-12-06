@@ -1,5 +1,4 @@
 <?php
-/*DbAcl schema generated on: 2007-11-24 15:11:13 : 1195945453*/
 
 /**
  * This is Acl Schema file
@@ -14,7 +13,7 @@
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright 2005-2015, Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       app.Config.Schema
  * @since         CakePHP(tm) v 0.2.9
