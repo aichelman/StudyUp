@@ -1,4 +1,4 @@
-<!--builds top navbar-->
+<!--builds top index navbar-->
 <div class="navbar navbar-fixed-top" style="position:absolute">
     <div class="navbar-inner">
         <div class="container" style="padding-top: 10px;">

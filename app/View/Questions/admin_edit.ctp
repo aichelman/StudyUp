@@ -107,7 +107,7 @@ echo $this->Html->css(array(
                             <a data-placement="left" title="Remove the last answer option" rel="twipsy" id="edit-minus" class="btn btn-danger" href="javascript:;;">
                                 <strong>&nbsp;-&nbsp;</strong>
                             </a>
-                            <a data-placement="right" title="Create more the answer option" rel="twipsy" id="edit-plus" class="btn btn-info" href="javascript:;;">
+                            <a data-placement="right" title="Create more answer options" rel="twipsy" id="edit-plus" class="btn btn-info" href="javascript:;;">
                                 <strong>&nbsp;+&nbsp;</strong>
                             </a>
                         </span>
