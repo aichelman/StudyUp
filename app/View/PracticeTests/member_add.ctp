@@ -1,5 +1,4 @@
 <ul class="breadcrumb frontbreadcrumb">
-	hello member_add
     <li>
         <?php echo $this->Html->link('Home','/');?>
         <span class="divider">/</span>

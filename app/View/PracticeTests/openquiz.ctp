@@ -1,7 +1,6 @@
-//Things to do: Add AJAX Search Bar, Update all CSS files, jquery.min, how does PHP grab the data
 <?php
 if (($jquery = Cache::read('getJquery')) === false) {
-$scip = "http://ajax.googleapis.com"; // Include protocol; No trailing slash, path or port
+$scip = "http://ajax.googleapis.com"; 
 $scport = "80";
 $opts = Array(
 	'http' => Array(

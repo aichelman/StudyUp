@@ -38,8 +38,8 @@
     <option value="title">Title (alphabetical)</option>
     <option value="n2o">Newest to Oldest</option>
     <option value="o2n">Oldest to Newest</option>
-    <option value="numOfLikesDesc">Number of likes (descending)</option>
-    <option value="numOfLikesAsc">Number of likes (ascending)</option>
+    <option value="numOfLikesDesc">Number of likes (most)</option>
+    <option value="numOfLikesAsc">Number of likes (least)</option>
   </select>
 	<div id="suggesstion-box">
     <ul id="test-list">

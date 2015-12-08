@@ -26,9 +26,6 @@
 						?>
                                 </div>
                         <?php else: ?>
-                        <div class="btn-group">
-                            <a class="btn btn-small btn-danger">Experience Points: </a>
-                        </div>
                                 <div class="btn-group">
                                     <a href="<?php echo $this->Html->url('/member/practice_tests/'); ?>" class="btn"><i class="icon white user"></i> Dashboard</a>
                                     <a href="#" data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></a>
